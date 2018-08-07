@@ -1,0 +1,40 @@
+<div class="cards container" id="card-content" *ngIf="weathers && has" >
+    <div class="card" *ngFor="let weather of weathers; let i= index" (click)="selectCity(weather.id, i)">
+        <aside class="aside-card">
+            <h2> {{ weather.main.temp }}°C</h2>
+        </aside>
+        <section class="section-card">
+
+            <div class="card-body">
+                <div class="card-body-aside">
+                    <div class="card-title">
+                        {{ weather.name }},
+                        <span> {{ weather.sys.country }} </span>
+                        <i class="icon-country"></i>
+                    </div>
+                    <div class="card-result">
+                        <div class="labels">
+                            <p>Max:
+                            </p>
+                            <p>Min:
+                            </p>
+                        </div>
+                        <div class="results">
+                            <span class="max">{{ weather.main.temp_max }} °C</span>
+                            <span class="min">{{ weather.main.temp_min }} °C</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-body-section">
+                    <div class="icon-weather">
+                        <img src="http://openweathermap.org/img/w/{{ weather.weather[0].icon }}.png" alt="" srcset="">
+                    </div>
+                     <small>{{ weather.weather[0].description }}</small>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+</div>

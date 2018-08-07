@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  font-family: Roboto, sans-serif;
+  
+}
+body {
+  background-color: #f6f6f6;  
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: table;
+
+}
+ul {
+  list-style: none;
+}

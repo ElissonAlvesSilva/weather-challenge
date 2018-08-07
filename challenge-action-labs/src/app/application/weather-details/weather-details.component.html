@@ -1,0 +1,71 @@
+<app-header type="details"></app-header>
+
+<div class="container content" *ngIf="cityWeather">
+    <div class="title-details">
+        <h1>{{ cityWeather.name || json }}</h1>
+    </div>
+    <div class="card">
+        <section>
+            <div class="aside-card">
+                <div class="data-top">
+
+                </div>
+                <div class="data-bottom">
+
+                </div>
+            </div>
+            <div class="section-card">
+                <div class="section-card-data">
+                    <div class="main-label">
+
+                    </div>
+                    <div class="main-data">
+
+                    </div>
+                </div>
+                <div class="section-card-data">
+                    <div class="main-label">
+
+                    </div>
+                    <div class="main-data">
+
+                    </div>
+                </div>
+                <div class="section-card-data">
+                    <div class="main-label">
+
+                    </div>
+                    <div class="main-data">
+
+                    </div>
+                </div>
+                <div class="section-card-data">
+                    <div class="main-label">
+
+                    </div>
+                    <div class="main-data">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="title-bottom">
+                <h3></h3>
+            </div>
+            <div class="list-forecast">
+                <ul>
+                    <li>
+                        <div class="day">
+                            <p></p>
+                            <p class="today"></p>
+                        </div>
+                        <div class="type"></div>
+                        <div class="results"></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+</div>

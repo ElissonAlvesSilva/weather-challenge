@@ -1,0 +1,13 @@
+<div class="header" id="header">
+    <div class="back" id="back" (click)="back()">
+        <i class="icon-back ion-android-arrow-back" ></i>
+    </div>
+    <div class="header-inner">
+        <form [formGroup]="formSearch" (ngSubmit)="search($event)">
+            <div class="input-group">
+                <label for="search" id="label">WEATHER IN YOUR CITY</label>
+                <input type="search" name="search" id="search" placeholder="Your city name" (input)="searchKeyPress($event.target.value)" [(ngModel)]="sea.search" formControlName="search">
+            </div>  
+        </form>
+    </div>
+</div>
