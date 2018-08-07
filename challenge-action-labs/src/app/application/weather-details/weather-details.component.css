@@ -6,11 +6,52 @@
     margin: 50px;
     padding: 25px;
     background-color: #fff;
-    width: 40rem;
-    height: 150px;
+    width: 50rem;
+    height: auto;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     border-radius: 4px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 25px;
+    justify-content: space-between;
+}
+.card-top {
+    display: flex;
+    flex-direction: row;
+}
+.aside-card {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    height: 208px;
+}
+.data-top {
+    background-color: #f0f0f0;
+    height: 104px;
+    color: #3c3c3c;
+    text-align: center;
+}
+.data-top h2 {
+    padding: 30px 15px;
+    font-size: 48px;
+    
+}
+.data-bottom .icon-weather {
+    display: block;
+    text-align: center;
+}
+.data-bottom small {
+    font-weight: 100;
+    text-transform: inherit;
+    opacity: 0.5;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3c3c3c;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
 }

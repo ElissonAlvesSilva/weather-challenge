@@ -2,16 +2,19 @@
 
 <div class="container content" *ngIf="cityWeather">
     <div class="title-details">
-        <h1>{{ cityWeather.name || json }}</h1>
+        <h1>Weather in {{ cityWeather.name || json }}</h1>
     </div>
     <div class="card">
-        <section>
+        <section class="card-top">
             <div class="aside-card">
                 <div class="data-top">
-
+                    <h2>17 ºC</h2>
                 </div>
                 <div class="data-bottom">
-
+                    <div class="icon-weather">
+                        <img src="http://openweathermap.org/img/w/{{ weather.weather[0].icon }}.png" alt="" srcset="">
+                    </div>
+                    <small> weather{{ weather.weather[0].description }}</small>
                 </div>
             </div>
             <div class="section-card">
