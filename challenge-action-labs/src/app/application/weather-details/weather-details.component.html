@@ -61,10 +61,10 @@
       </div>
       <div class="list-forecasts">
         <ul>
-          <li class="active forecast" *ngFor="let weather of weathers">
+          <li class="active forecast" *ngFor="let weather of weathers" [ngClass]="isToday(weather.dt_txt)">
             <div class="day">
               <p>{{ weather.dt_txt |  amLocale:'en' | amDateFormat:'ddd DD MMM' }}</p>
-              <small class="today"> Today</small>
+              <small class="today" *ngIf="isTodayText(weather.dt_txt)">Today</small>
             </div>
             <div class="type">
               <img src="http://openweathermap.org/img/w/{{ weather.weather[0].icon }}.png" alt="" srcset="">

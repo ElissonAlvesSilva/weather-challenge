@@ -5,7 +5,7 @@ import { Main } from './main.model';
 export class Weather {
     id: Number;
     name: String;
-    dt: String;
+    dt: string;
     dt_text: String;
     weather: Array<WeatherDesc>;
     base: String;

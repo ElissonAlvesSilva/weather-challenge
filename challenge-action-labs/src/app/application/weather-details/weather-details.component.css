@@ -17,6 +17,10 @@
   justify-content: space-between;
 }
 
+.no-today {
+  display: none;
+}
+
 .actual-day {
   color: #3c3c3c;
   opacity: 0.5;

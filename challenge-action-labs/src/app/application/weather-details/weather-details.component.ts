@@ -15,6 +15,8 @@ export class WeatherDetailsComponent implements OnInit, AfterContentInit {
 
   weather: Weather;
   weathers: Array<Weather>;
+  today: false;
+  timeToday = new Date();
   constructor(
     private _eventWeather: EventSearchService,
     private _weatherService: WeatherService,
@@ -42,11 +44,35 @@ export class WeatherDetailsComponent implements OnInit, AfterContentInit {
       this._weatherService.searchWeatherForecastById(param.id)
         .then(result => {
           this.weathers = result.json().list;
+
         })
         .catch(err => {
 
         });
     });
+  }
+  isTodayText(value) {
+    const y = new Date();
+    const x = new Date(value);
+    const date = x.getDay() + '-' + x.getMonth();
+    const today = y.getDay() + '-' + y.getMonth();
+    if (date === today) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  isToday(value) {
+
+    const y = new Date();
+    const x = new Date(value);
+    const date = x.getDay() + '-' + x.getMonth();
+    const today = y.getDay() + '-' + y.getMonth();
+    if (date === today) {
+      return { 'active': true };
+    } else {
+      return { 'active': false };
+    }
   }
 
 }
