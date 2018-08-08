@@ -1,5 +1,5 @@
 <div class="cards container" id="card-content" *ngIf="weathers && has" >
-    <div class="card" *ngFor="let weather of weathers; let i= index" (click)="selectCity(weather.id, i)">
+    <div class="card" *ngFor="let weather of weathers" (click)="selectedCity(weather.id)">
         <aside class="aside-card">
             <h2> {{ weather.main.temp }}°C</h2>
         </aside>
@@ -10,7 +10,9 @@
                     <div class="card-title">
                         {{ weather.name }},
                         <span> {{ weather.sys.country }} </span>
-                        <i class="icon-country"></i>
+                        <span>
+                          <img src="http://openweathermap.org/images/flags/{{ weather.sys.country | lowercase }}.png" alt="" srcset="">
+                        </span>
                     </div>
                     <div class="card-result">
                         <div class="labels">

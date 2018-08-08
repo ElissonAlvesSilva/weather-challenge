@@ -6,14 +6,16 @@ export class Weather {
     weather: Array<WeatherDesc>;
     base: String;
     main: {
-        temp: String,
-        pressure: String,
-        humidity: String,
-        temp_min: String,
-        temp_max: String,
+        temp: String;
+        pressure: String;
+        humidity: String;
+        temp_min: String;
+        temp_max: String;
     };
     sys: {
-        country: String,
+        country: String;
+        sunrise: Date;
+        sunset: Date;
     };
 
 }

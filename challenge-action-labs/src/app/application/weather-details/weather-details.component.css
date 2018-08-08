@@ -1,57 +1,167 @@
 .title-details {
-    margin-top: 25px;
-    text-align: center;
+  margin-top: 25px;
+  text-align: center;
 }
+
 .card {
-    margin: 50px;
-    padding: 25px;
-    background-color: #fff;
-    width: 50rem;
-    height: auto;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
-    justify-content: space-between;
+  margin-top: 50px;
+  padding: 25px;
+  background-color: #fff;
+  width: 50rem;
+  height: auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  justify-content: space-between;
 }
+
 .card-top {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
+
 .aside-card {
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    height: 208px;
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  height: 208px;
+  flex-grow: 5;
+  width: 200px;
 }
+
 .data-top {
-    background-color: #f0f0f0;
-    height: 104px;
-    color: #3c3c3c;
-    text-align: center;
+  background-color: #f0f0f0;
+  height: 104px;
+  color: #3c3c3c;
+  text-align: center;
 }
+
 .data-top h2 {
-    padding: 30px 15px;
-    font-size: 48px;
-    
+  padding: 20px 15px;
+  font-size: 48px;
+}
+.data-bottom {
+  padding-top: 15px;
 }
 .data-bottom .icon-weather {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
+
 .data-bottom small {
-    font-weight: 100;
-    text-transform: inherit;
-    opacity: 0.5;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #3c3c3c;
-    display: block;
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
+  display: block;
+  opacity: 0.75;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3c3c3c;
+}
+
+.section-card {
+  width: 100%;
+  display: inline-block;
+  margin-left: 25px;
+  padding: 14px 0 0px 0;
+}
+
+.section-card-data {
+  flex-grow: 7;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid #f0f0f0;
+}
+.section-card-data .main-label {
+  flex-grow: 5;
+}
+.section-card-data span{
+  font-size: 14px;
+}
+.section-card-data .main-label label {
+  padding: 0px 0 15px 2px;
+  width: 27px;
+  height: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+  display: inline-block;
+
+}
+.section-card-data .main-data {
+  flex-grow: 6;
+
+}
+.section-card-data .main-data:nth-child(2) span{
+  margin-left: 100px;
+}
+
+/* forecasts */
+.card-forecasts {
+  margin-top: 48px;
+}
+
+.card-forecasts .list-forecasts {
+  margin-top: 16px;
+}
+.card-forecasts .list-forecasts .forecast {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 30px 40px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.card-forecasts .list-forecasts .forecast.active {
+  background-color: #f0f0f0;
+  border-left: 8px solid #39a3db;
+}
+.card-forecasts .list-forecasts .forecast.active .today {
+  font-size: 12px;
+  font-weight: 100;
+  font-style: italic;
+}
+.title-bottom {
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+}
+.card-forecasts span {
+  font-size: 16px;
+}
+.card-forecasts .day {
+  flex-grow: 3;
+}
+.card-forecasts .day p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #3c3c3c;
+}
+.card-forecasts .type {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-forecasts .type small {
+  font-weight: 100;
+  font-style: italic;
+  color: #3c3c3c;
+}
+.card-forecasts .results {
+  flex-grow: 4;
+  display: flex;
+}
+.card-forecasts .results span:nth-child(1) {
+  margin-right: 20px;
 }

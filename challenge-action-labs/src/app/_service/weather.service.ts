@@ -21,7 +21,7 @@ export class WeatherService {
     return this._htpp.get(`${API}weather?id=${_id}&appid=${APIID}&units=metric`, this.setHeaders())
       .toPromise()
       .then(response => {
-        return response;
+        return response.json();
       });
   }
 

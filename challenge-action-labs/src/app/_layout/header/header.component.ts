@@ -32,6 +32,9 @@ export class HeaderComponent implements OnInit {
     if (this.type === 'details') {
       document.getElementById('header').style.height = '120px';
       document.getElementById('label').style.display = 'none';
+      document.getElementById('back').style.display = 'inline-block';
+    }else {
+      document.getElementById('back').style.display = 'none';
     }
     this._search = new Array<Weather>();
   }

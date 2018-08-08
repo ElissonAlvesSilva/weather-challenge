@@ -31,8 +31,7 @@ export class CardComponent implements OnInit {
       this.has = param;
     });
   }
-  selectCity(id, index) {
-    this._eventSearch.weatherCity.emit(this.weathers[index]);
+  selectedCity(id) {
     this._router.navigate(['/details', id]);
   }
 
