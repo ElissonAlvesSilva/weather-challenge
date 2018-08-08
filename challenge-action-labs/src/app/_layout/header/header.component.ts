@@ -33,7 +33,8 @@ export class HeaderComponent implements OnInit {
       document.getElementById('header').style.height = '120px';
       document.getElementById('label').style.display = 'none';
       document.getElementById('back').style.display = 'inline-block';
-    }else {
+      (<HTMLInputElement> document.getElementById('search_input')).disabled = true;
+    } else {
       document.getElementById('back').style.display = 'none';
     }
     this._search = new Array<Weather>();
@@ -44,6 +45,12 @@ export class HeaderComponent implements OnInit {
       console.log(event.target.value);
       this._weatherService.searchCityByName(this._search)
         .then((result) => {
+          if (result.status < 400) {
+            this._search = result.json().list;
+            this._eventWeather.citys.emit(this._search);
+            this._eventWeather.display.emit(true);
+
+          }
         }).catch((err) => {
           console.log(err);
         });
@@ -51,16 +58,19 @@ export class HeaderComponent implements OnInit {
   }
   searchKeyPress(value) {
     if (value !== '') {
+      document.getElementById('icon-search').style.display = 'none';
       this._weatherService.searchCityByName(value)
         .then((result) => {
           if (result.status < 400) {
             this._search = result.json().list;
             this._eventWeather.citys.emit(this._search);
             this._eventWeather.display.emit(true);
+
           }
         }).catch((err) => console.log(err));
     } else {
       this._eventWeather.display.emit(false);
+      document.getElementById('icon-search').style.display = 'inline-block';
     }
   }
   back() {

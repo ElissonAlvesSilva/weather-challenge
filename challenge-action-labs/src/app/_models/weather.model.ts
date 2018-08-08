@@ -1,21 +1,15 @@
 import { WeatherDesc } from './weather-desc.model';
+import { Sys } from './sys.model';
+import { Main } from './main.model';
 
 export class Weather {
     id: Number;
     name: String;
+    dt: String;
+    dt_text: String;
     weather: Array<WeatherDesc>;
     base: String;
-    main: {
-        temp: String;
-        pressure: String;
-        humidity: String;
-        temp_min: String;
-        temp_max: String;
-    };
-    sys: {
-        country: String;
-        sunrise: Date;
-        sunset: Date;
-    };
+    main: Main;
+    sys: Sys;
 
 }

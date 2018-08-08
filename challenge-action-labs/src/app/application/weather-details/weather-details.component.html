@@ -3,6 +3,7 @@
 <div class="container content" *ngIf="weather">
   <div class="title-details">
     <h1>Weather in {{ weather.name }}</h1>
+    <small class="actual-day">{{ weather.dt |  amFromUnix | amDateFormat:'HH:mm MMMM DD' }}</small>
   </div>
   <div class="card">
     <section class="card-top">
@@ -40,7 +41,7 @@
             <label for="">Sunrise</label>
           </div>
           <div class="main-data">
-            <span>{{ weather.sys.sunrise |  amLocale:'br' | amDateFormat:'h:mm' }}</span>
+            <span>{{ weather.sys.sunrise |  amFromUnix | amDateFormat:'HH:mm' }}</span>
           </div>
         </div>
         <div class="section-card-data">
@@ -49,7 +50,7 @@
 
           </div>
           <div class="main-data">
-            <span>{{ weather.sys.sunset |  amLocale:'br' | amDateFormat:'h:mm' }}</span>
+            <span>{{ weather.sys.sunset |  amFromUnix | amDateFormat:'HH:mm' }}</span>
           </div>
         </div>
       </div>
@@ -62,7 +63,7 @@
         <ul>
           <li class="active forecast" *ngFor="let weather of weathers">
             <div class="day">
-              <p>{{ weather.dt |  amLocale:'en' | amDateFormat:'dddd Do' }}</p>
+              <p>{{ weather.dt_txt |  amLocale:'en' | amDateFormat:'ddd DD MMM' }}</p>
               <small class="today"> Today</small>
             </div>
             <div class="type">

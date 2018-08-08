@@ -17,6 +17,11 @@
   justify-content: space-between;
 }
 
+.actual-day {
+  color: #3c3c3c;
+  opacity: 0.5;
+}
+
 .card-top {
   display: flex;
   flex-direction: row;
@@ -38,7 +43,7 @@
 }
 
 .data-top h2 {
-  padding: 20px 15px;
+  padding: 25px 15px;
   font-size: 48px;
 }
 .data-bottom {
@@ -115,7 +120,6 @@
 .card-forecasts .list-forecasts .forecast {
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
   padding: 30px 40px;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -127,6 +131,8 @@
   font-size: 12px;
   font-weight: 100;
   font-style: italic;
+  margin-top: 10px;
+  display: block;
 }
 .title-bottom {
   font-size: 24px;
@@ -142,6 +148,7 @@
 }
 .card-forecasts .day {
   flex-grow: 3;
+  flex-basis: 0;
 }
 .card-forecasts .day p {
   font-size: 16px;
@@ -149,19 +156,32 @@
   color: #3c3c3c;
 }
 .card-forecasts .type {
-  display: flex;
-  flex-direction: column;
+  text-align: left;
+  flex-grow: 4;
+  flex-basis: 0;
 }
+
+
 
 .card-forecasts .type small {
   font-weight: 100;
   font-style: italic;
   color: #3c3c3c;
+  position: relative;
+  top: -20px;
+  left: 20px;
 }
 .card-forecasts .results {
   flex-grow: 4;
+  flex-basis: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-forecasts .results span {
+  display: inline-block;
 }
 .card-forecasts .results span:nth-child(1) {
   margin-right: 20px;
+
 }

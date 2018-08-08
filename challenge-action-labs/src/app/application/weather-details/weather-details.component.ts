@@ -1,9 +1,10 @@
-import { WeatherDesc } from './../../_models/weather-desc.model';
 import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { EventSearchService } from '../../_service/event-search.service';
 import { Weather } from '../../_models/weather.model';
 import { WeatherService } from '../../_service/weather.service';
 import { ActivatedRoute } from '@angular/router';
+import { Main } from '../../_models/main.model';
+import { Sys } from '../../_models/sys.model';
 
 @Component({
   selector: 'app-weather-details',
@@ -20,6 +21,8 @@ export class WeatherDetailsComponent implements OnInit, AfterContentInit {
     private _activatedRoute: ActivatedRoute) {
     this.weather = new Weather();
     this.weathers = new Array<Weather>();
+    this.weather.main = new Main();
+    this.weather.sys = new Sys();
   }
 
   ngOnInit() {
@@ -35,9 +38,7 @@ export class WeatherDetailsComponent implements OnInit, AfterContentInit {
         .catch(err => {
 
         });
-    });
 
-    this._activatedRoute.params.subscribe(param => {
       this._weatherService.searchWeatherForecastById(param.id)
         .then(result => {
           this.weathers = result.json().list;
